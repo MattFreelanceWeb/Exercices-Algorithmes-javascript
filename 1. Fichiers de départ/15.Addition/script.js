@@ -1,6 +1,9 @@
 function addition(arr) {
-
-
+    let count = 0
+    for(item of arr){
+        count = item + count
+    }
+    return count
 }
 
 

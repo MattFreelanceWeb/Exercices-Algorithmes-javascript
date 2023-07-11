@@ -1,7 +1,13 @@
-function interval(min,max,nb){
+// function interval(min,max,nb){
+//   if(nb>min && nb<max){
+//     return true
+//   } else {
+//     return false
+//   }
+// }
 
-}
-
+//oneliner
+const interval= (min,max,nb) => nb>min && nb<max
 
 /* ÉNONCÉ 📚 */
 

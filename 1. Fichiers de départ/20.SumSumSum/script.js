@@ -1,5 +1,12 @@
 function sum(min,max) {
 
+ let count = 0
+
+  for(let i = min; i <= max; i ++){
+    count = count + i
+  }
+
+return count
 
 }
 

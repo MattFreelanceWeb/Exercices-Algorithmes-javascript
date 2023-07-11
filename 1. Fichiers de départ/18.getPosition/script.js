@@ -1,7 +1,14 @@
-function getPosition(arr,num) {
+// function getPosition(arr,num) {
 
-}
+//   const updatedArr = [...arr , num]
+//   const sortedArr = updatedArr.sort()
 
+//   return sortedArr.indexOf(num)
+  
+// }
+
+//onliner
+const getPosition = (arr,num) => [...arr,num].sort().indexOf(num)
 
 /* ÉNONCÉ 📚 */
 

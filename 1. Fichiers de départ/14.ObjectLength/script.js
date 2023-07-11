@@ -1,5 +1,9 @@
 function objectLength(obj){
-
+let count=0
+for(item in obj){
+    count++
+}
+return count
 }
 
 

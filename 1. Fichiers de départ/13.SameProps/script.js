@@ -1,8 +1,9 @@
-function sameProps(obj, source){
+// function sameProps(obj, source){
+//  JSON.stringify({...obj}) === JSON.stringify({...source})
 
+// }
 
-}
-
+const sameProps = (obj,source) => JSON.stringify({...obj}) === JSON.stringify({...source})
 
 /* ÉNONCÉ 📚 */
 

@@ -1,6 +1,22 @@
 function mostFrequent(arr) {
 
+ let itemToReturn = arr[0]
+ const occurences = {}
 
+ for (i=0; i<arr.length; i++){
+    const current = arr[i]
+
+    if(occurences[current]){
+        occurences[current]++
+    } else {
+        occurences[current] = 1
+    }
+
+    if(occurences[current] > occurences[itemToReturn]){
+        itemToReturn = current
+    }
+ }
+ return itemToReturn
 }
 
 

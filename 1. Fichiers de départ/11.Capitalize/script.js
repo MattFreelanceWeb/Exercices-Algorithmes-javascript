@@ -1,5 +1,18 @@
 function capitalize(str) {
 
+    let strArray = str.split(' ')
+    const uppercaseArray =[]
+    
+    for ( word of strArray ){
+    const firtLetter = word[0].toUpperCase()
+    const restOfTheWord = word.substring(1)
+    const wordToUppercase= firtLetter + restOfTheWord
+    uppercaseArray.push(wordToUppercase)
+
+    }
+
+    return uppercaseArray.join(' ')
+
 }
 
 
