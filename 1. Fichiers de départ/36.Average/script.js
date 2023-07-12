@@ -1,5 +1,11 @@
 function sortedStudents(arr) {
 
+  return arr.sort(function(a, b) {
+    return (
+      Math.trunc(b.grades.reduce((c, d) => c + d, 0) / b.grades.length) -
+      Math.trunc(a.grades.reduce((c, d) => c + d, 0) / a.grades.length) 
+    );
+  });
 }
 
 /* ÉNONCÉ 📚 */
@@ -12,12 +18,12 @@ function sortedStudents(arr) {
 /* Test à passer 🧪 */
 
 console.log(
-sortedStudents([
-  { name: "Tom", grades: [1, 3, 5, 9, 2, 7] },
-  { name: "Jack", grades: [20, 4, 18, 10, 14, 12] },
-  { name: "Ana", grades: [11,14,3,14,12,14] },
-  { name: "Sara", grades: [10,12,14,15,14,19] },
-])
+  sortedStudents([
+    { name: "Tom", grades: [1, 3, 5, 9, 2, 7] },
+    { name: "Jack", grades: [20, 4, 18, 10, 14, 12] },
+    { name: "Ana", grades: [11, 14, 3, 14, 12, 14] },
+    { name: "Sara", grades: [10, 12, 14, 15, 14, 19] },
+  ])
 );
 
 /* Returns */

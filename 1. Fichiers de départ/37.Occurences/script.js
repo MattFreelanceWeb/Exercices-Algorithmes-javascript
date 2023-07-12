@@ -1,5 +1,8 @@
 function occurrences(str, letter){
+  const strArr = str.split('')
+  const occurences = strArr.filter(item=>item===letter)
 
+return occurences.length
 }
 
 /* ÉNONCÉ 📚 */

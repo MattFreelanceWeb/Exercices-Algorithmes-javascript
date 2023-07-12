@@ -1,8 +1,25 @@
 function addPrime(num) {
+  let arrToReturn = [];
 
+  const isPrime = (number) => {
+    if (number < 2) return false;
 
+    for (i = 2; i < number; i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  };
+
+  for (j = 1; j <= num; j++) {
+    if (isPrime(j)) {
+      arrToReturn.push(j);
+    }
+  }
+
+  return arrToReturn.reduce((a, b) => a + b, 0);
 }
-
 
 /* ÉNONCÉ 📚 */
 
@@ -14,9 +31,8 @@ function addPrime(num) {
   2, 3, 5, 7, 11, 13, 17, 19 etc ...
 */
 
-
 /* Tests à passer 🧪 */
 
-console.log(addPrime(10));   // 17
-console.log(addPrime(5));    // 10
-console.log(addPrime(13));   // 41
+console.log(addPrime(10)); // 17
+console.log(addPrime(5)); // 10
+console.log(addPrime(13)); // 41

@@ -1,5 +1,17 @@
 function getSortedSubarrays(arr) {
 
+  let arrToRetun = []
+
+  let occurences = []
+
+  for(item of arr){
+    if(!occurences.includes(item)){
+      arrToRetun.push(arr.filter(i=>i===item))
+      occurences.push(item)
+    }
+  }
+  
+ return arrToRetun
 }
 
 

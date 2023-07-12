@@ -1,8 +1,22 @@
-function isFrenchNumber(str){
- 
+function isFrenchNumber(str) {
+  const number = /[0-9]/;
+  const arrStr = str.split("");
 
+  const arrOfNumber = [];
+
+  for (item of arrStr) {
+    if (number.test(item)) {
+      arrOfNumber.push(item);
+    }
+  }
+  if(arrOfNumber[0]!= 0){
+    return false
+  }
+  if(arrOfNumber.length !== 10){
+    return false
+  }
+  return true
 }
-
 
 /* ÉNONCÉ 📚 */
 
@@ -19,7 +33,6 @@ function isFrenchNumber(str){
   Retournez true si la chaîne en paramètre passe le test(si c'est un  numéro valable)
   et false en cas contraire.
 */
-
 
 /* Tests à passer 🧪 */
 

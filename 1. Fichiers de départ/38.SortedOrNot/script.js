@@ -1,5 +1,12 @@
 function isSorted(arr) {
 
+ if([...arr].sort((a,b)=> a - b).every((el,index)=> el === arr[index])){
+  return'ascending'
+ }
+ if([...arr].sort((a,b)=> b - a).every((el,index)=> el === arr[index])){
+  return'descending'
+ }
+ return 'no'
 }
 
 /* ÉNONCÉ 📚 */

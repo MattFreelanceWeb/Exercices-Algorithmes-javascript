@@ -1,5 +1,9 @@
 function merging() {
 
+  const arrToReturn = [];
+  [...arguments].forEach(subArray => subArray.forEach(el => arrToReturn.indexOf(el) === -1 && arrToReturn.push(el)))
+
+  return arrToReturn
 }
 
 
