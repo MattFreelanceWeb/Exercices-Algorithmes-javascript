@@ -1,6 +1,8 @@
 function differences(arr1, arr2) {
+    
   let arrToCompare = [];
   let otherArray = [];
+
   const returnedArr = [];
 
   if (arr1.length > arr2.length) {
@@ -10,7 +12,7 @@ function differences(arr1, arr2) {
     arrToCompare = arr2;
     otherArray = arr1;
   }
-  
+
   for (i of otherArray){
     !arrToCompare.includes(i) && returnedArr.push(i)
   }
@@ -18,7 +20,6 @@ function differences(arr1, arr2) {
 
     !otherArray.includes(item) && returnedArr.push(item)
   }
-
 
   return returnedArr
 }
@@ -32,6 +33,6 @@ Retournez ces différences dans un nouveau tableau.
 
 /* Tests à passer 🧪 */
 
-console.log(differences([1, 2, 3, 5], [1, 2, 3, 4, 5])); //  [ 4 ]
+console.log(differences([1, 2, 3, 4, 5],[1, 2, 3, 5], )); //  [ 4 ]
 console.log(differences(["x", "a", "c"], ["m", "k", "l"])); //  [ 'x', 'a', 'c', 'm', 'k', 'l' ]
 console.log(differences([999, 777], [777, 444, 111])); //  [ 999, 444, 111 ]

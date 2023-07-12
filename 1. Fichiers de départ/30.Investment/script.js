@@ -1,7 +1,23 @@
-function investment(arr){
+function investment(arr) {
+  const weekdays= ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche']
 
+  let countInvestment = 0;
+  for (i = 0; i < arr.length; i++) {
+    for (j = i + 1; j < arr.length; j++) {
+      if (arr[j] - arr[i] > countInvestment) {
+        countInvestment = arr[j] - arr[i];
+        date = [weekdays[i],weekdays[j]]
+      }
+    }
+  }
+  if(countInvestment === 0){
+    return `pas d'investissement à faire cette semaine`
+  } else {
+    return `vous aurez gagné ${countInvestment} en investissant le ${date[0]} et en revendant le ${date[1]}`
+  }
 }
 
+//[2,50,10,20,80,60,20]
 /* ÉNONCÉ 📚 */
 
 /*
@@ -23,9 +39,9 @@ function investment(arr){
 
   Bon courage !
 */
- 
- /* Tests à passer 🧪 */
- 
-console.log(investment([2,50,10,20,80,60,20]));                   // Investir Lundi, vendre Vendredi, benef : 78
-console.log(investment([3560,4550,5457,6542,4320,6050,2002]));    // Investir Jeudi, vendre Dimanche, benef : 2982
-console.log(investment([38,23,28,29,24,32,35]));                  // Investir Mardi, vendre Dimanche, benef : 12
+
+/* Tests à passer 🧪 */
+
+console.log(investment([2, 50, 10, 20, 80, 60, 20])); // Investir Lundi, vendre Vendredi, benef : 78
+console.log(investment([3560, 4550, 5457, 6542, 4320, 6050, 2002])); // Investir Jeudi, vendre Dimanche, benef : 2982
+console.log(investment([38, 23, 28, 29, 24, 32, 35])); // Investir Mardi, vendre Dimanche, benef : 12
